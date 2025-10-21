@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://ct81snplfheji"]
+
+[ext_resource type="Texture2D" uid="uid://bc0hidyxjk44c" path="res://assets/sprites/Traps/Falling Platforms/On (32x10).png" id="1_bga04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_que50"]
+size = Vector2(30, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hey2k"]
+atlas = ExtResource("1_bga04")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_172wr"]
+atlas = ExtResource("1_bga04")
+region = Rect2(32, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2hoc"]
+atlas = ExtResource("1_bga04")
+region = Rect2(64, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fldb1"]
+atlas = ExtResource("1_bga04")
+region = Rect2(96, 0, 32, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guvtl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hey2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_172wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2hoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fldb1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Fall Fan" type="AnimatableBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_que50")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_guvtl")
+autoplay = "default"

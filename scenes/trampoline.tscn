@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpwyen1t4v6me"]
+
+[ext_resource type="Texture2D" uid="uid://dmveom74aqd7c" path="res://assets/sprites/Traps/Trampoline/Jump (28x28).png" id="1_2yctu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo48x"]
+size = Vector2(20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0kc7"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(0, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne2mo"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(28, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cvei"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(56, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_que50"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(84, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hey2k"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(112, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_172wr"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(140, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2hoc"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(168, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fldb1"]
+atlas = ExtResource("1_2yctu")
+region = Rect2(196, 0, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guvtl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0kc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne2mo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cvei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_que50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hey2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_172wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2hoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fldb1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Trampoline" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_wo48x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_guvtl")
+autoplay = "default"
+frame_progress = 0.43887323
