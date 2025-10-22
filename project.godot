@@ -11,13 +11,20 @@ config_version=5
 [application]
 
 config/name="platform"
-run/main_scene="uid://yek2prhclulc"
+run/main_scene="uid://wmb8a6ngwbuc"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Music="*res://scenes/music.tscn"
+Globals="*res://scripts/globals.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [gui]
 
