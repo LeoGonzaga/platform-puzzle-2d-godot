@@ -69,6 +69,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_fldb1"]
 
 [node name="Saw" type="StaticBody2D"]
+z_index = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g2hoc")

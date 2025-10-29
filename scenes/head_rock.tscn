@@ -44,6 +44,7 @@ size = Vector2(30, 30)
 [node name="Head Rock" type="AnimatableBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
 sprite_frames = SubResource("SpriteFrames_g4y24")
 autoplay = "default"
 frame_progress = 0.33474588
